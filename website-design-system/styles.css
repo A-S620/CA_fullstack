@@ -33,36 +33,68 @@
     border-bottom: solid 1.4142px #333333;
     border-left: solid 1.4142px #333333;
 }
+
 .light-coral {
     background-color: #FF686B;
 }
+
 .languid-lavender {
     background-color: #DAD4EF;
 }
+
 .aquamarine {
     background-color: #A5FFD6;
 }
+
 .y-in-min-blue {
     background-color: #3E517A;
 }
+
 .imperial-red {
     background-color: #EF233C;
 }
-#colour-container {
-    display: block;
-    width: 100%;
+
+.container {
+    width: 75%;
+    border: 2px solid #a2a2a6;
+    padding: 10px;
+    margin: 20px auto;
 }
-#colours {
-    margin: 0 auto;
-}
+
 h1 {
     text-align: center;
     color: #3E517A;
     font-weight: bolder;
+    margin: 0 auto;
 }
-#header {
+
+.header {
     border: 20px solid #3E517A;
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
     /*border-radius: 25px;*/
+}
+
+.text1 {
+    font-family: 'Fasthand', serif;
+}
+
+.text2 {
+    font-family: 'Libre Barcode 128 Text', cursive;
+}
+
+.text3 {
+    font-family: 'Pinyon Script', cursive;
+}
+
+.text4 {
+    font-family: 'Reenie Beanie', cursive;
+
+}
+
+.text5 {
+    font-family: 'Special Elite', cursive;
+}
+.font {
+    font-size: x-large;
 }
