@@ -61,7 +61,7 @@
     margin: 20px auto;
 }
 
-h1 {
+#title {
     text-align: center;
     color: #3E517A;
     font-weight: bolder;
@@ -72,7 +72,6 @@ h1 {
     border: 20px solid #3E517A;
     width: 50%;
     margin: 20px auto;
-    /*border-radius: 25px;*/
 }
 
 .text1 {
@@ -96,5 +95,25 @@ h1 {
     font-family: 'Special Elite', cursive;
 }
 .font {
-    font-size: x-large;
+    font-size: xx-large;
+}
+#text-styles {
+    display: inline-block;
+}
+#h1-title{
+    font-weight: 700;
+    font-size: 26px;
+    font-family: 'Fasthand', serif;
+}
+#h2-subtitle{
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Fasthand', serif;
+
+}
+#p-paragraph-text{
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Fasthand', serif;
+
 }
