@@ -76,6 +76,7 @@
 }
 .locations {
     height: 500px;
+    width: 1200px;
     background-image: url("./images/img-locations-background.webp");
     display: flex;
     justify-content: center;
@@ -90,7 +91,6 @@
 }
 .location {
     width: 300px;
-    padding: 20px 20px;
     margin: 20px;
     background-color: black;
     display: flex;
