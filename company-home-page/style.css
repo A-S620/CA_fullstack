@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./resources/andrea-de-santis-A78L3bSyBdc-unsplash.jpg");
+    width: 100%;
+    height: 50%;
+}
+.companyName {
+    display: flex;
+    align-self: center;
+}
+.mission {
+    display: flex;
+    align-self: center;
+}
+
+
