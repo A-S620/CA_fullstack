@@ -14,17 +14,16 @@ export default function NewTopicForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (name.length === 0) {
+        if (name.length !== 0) {
             dispatch(addTopic({
                 id: uuidv4(),
                 name: name,
                 icon: icon,
 
+
             }))
             return;
         }
-
-        // dispatch your add topic action here
         history.push(ROUTES.topicsRoute());
     };
 

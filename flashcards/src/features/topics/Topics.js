@@ -17,7 +17,7 @@ export default function Topics() {
                                 <img src={topic.icon} alt=""/>
                                 <div className="text-content">
                                     <h2>{topic.name}</h2>
-                                    <p>{topic.quizIds} Quizzes</p>
+                                    <p>{topic.quizIds.length} Quizzes</p>
                                 </div>
                             </div>
                         </Link>

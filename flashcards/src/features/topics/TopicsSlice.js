@@ -6,28 +6,25 @@ export const topicsSlice = createSlice({
         topics: {
             '123': {
                 id: '123',
-                name: 'example topic',
-                icon: 'icon url',
-                quizIds: ['456']
+                name: 'this is a topic',
+                icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/calendar.svg',
+                quizIds: []
             }
         }
     },
     reducers: {
         addTopic: (state, action) => {
-            console.log(action)
-            state.topics = {
-                ...state.topics,
-                [action.payload.id]: {
-                    id: action.payload.id,
-                    name: action.payload.name,
-                    icon: action.payload.icon,
-                    quizIds: []
+            const {id, name, icon} = action.payload;
+            state.topics[id] = {
+                id: id,
+                name: name,
+                icon: icon,
+                quizIds: []
 
-                }
             }
         }
     }
 })
-export const selectTopics = state => state.topics;
+export const selectTopics = state => state.topics.topics;
 export const {addTopic} = topicsSlice.actions;
 export default topicsSlice.reducer;
