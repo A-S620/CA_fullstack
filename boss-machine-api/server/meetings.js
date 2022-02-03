@@ -1,10 +1,8 @@
 const express = require('express');
 const {
     getAllFromDatabase,
-    getFromDatabaseById,
-    updateInstanceInDatabase,
     addToDatabase,
-    deleteFromDatabaseById
+    deleteAllFromDatabase
 } = require("./db");
 const meetingsRouter = express.Router();
 
@@ -22,8 +20,8 @@ meetingsRouter.post('/', (req, res, next) => {
     }
     res.status(409).send();
 })
-meetingsRouter.delete('/:minionId', (req, res, next) => {
-    const deletedItem = deleteFromDatabaseById('meetings', req.params.minionId);
+meetingsRouter.delete('/', (req, res, next) => {
+    const deletedItem = deleteAllFromDatabase('meetings');
     if (deletedItem) {
         res.status(204).send();
         next();
