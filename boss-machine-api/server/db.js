@@ -269,6 +269,6 @@ module.exports = {
     getFromDatabaseById,
     addToDatabase,
     updateInstanceInDatabase,
-    deleteFromDatabasebyId: deleteFromDatabaseById,
+    deleteFromDatabaseById,
     deleteAllFromDatabase,
 };

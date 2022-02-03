@@ -4,7 +4,7 @@ const {
     getFromDatabaseById,
     updateInstanceInDatabase,
     addToDatabase,
-    deleteFromDatabasebyId
+    deleteFromDatabaseById
 } = require("./db");
 const minionsRouter = express.Router();
 
@@ -42,7 +42,7 @@ minionsRouter.put('/:minionId', (req, res, next) => {
     res.status(404).send();
 })
 minionsRouter.delete('/:minionId', (req, res, next) => {
-    const deletedMinion = deleteFromDatabasebyId('minions', req.params.minionId);
+    const deletedMinion = deleteFromDatabaseById('minions', req.params.minionId);
     if (deletedMinion) {
         res.status(204).send();
         next();
