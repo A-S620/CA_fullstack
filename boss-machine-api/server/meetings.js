@@ -2,7 +2,7 @@ const express = require('express');
 const {
     getAllFromDatabase,
     addToDatabase,
-    deleteAllFromDatabase
+    deleteAllFromDatabase, createMeeting
 } = require("./db");
 const meetingsRouter = express.Router();
 
@@ -13,12 +13,10 @@ meetingsRouter.get('/', (req, res, next) => {
     next();
 })
 meetingsRouter.post('/', (req, res, next) => {
-    const addedItem = addToDatabase('meetings', req.body);
-    if (addedItem) {
-        res.status(201).send(addedItem);
-        next();
-    }
-    res.status(409).send();
+    const createdMeeting = addToDatabase('meetings', createMeeting())
+    res.status(201).send(createdMeeting);
+    next();
+
 })
 meetingsRouter.delete('/', (req, res, next) => {
     const deletedItem = deleteAllFromDatabase('meetings');
