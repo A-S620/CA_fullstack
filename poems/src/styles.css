@@ -3,4 +3,11 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 16px;}
+:root {
+  --primary: #3F2E56;
+  --secondary: #453F78;
+  --secondary2: #401F3E;
+  --tertiary: #759AAB;
+  --highlight: #fee6e3;
+}
