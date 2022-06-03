@@ -42,7 +42,7 @@
 }
 
 .btn:active {
-  background-color: #ffdeda;
+  background-color: var(--tertiary);
   outline: 0;
 }
 
