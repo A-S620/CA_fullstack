@@ -1,4 +1,4 @@
-export default interface Poem {
+export default interface IPoem {
   author?: string;
   title?: string;
   lines?: string[];
