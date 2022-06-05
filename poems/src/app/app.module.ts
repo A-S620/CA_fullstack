@@ -9,6 +9,7 @@ import { InputFieldComponent } from './components/input-field/input-field.compon
 import { FormComponent } from './components/form/form.component';
 import { PoemsComponent } from './components/poems/poems.component';
 import { PoemComponent } from './components/poem/poem.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PoemComponent } from './components/poem/poem.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
