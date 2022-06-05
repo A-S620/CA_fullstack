@@ -1,0 +1,21 @@
+.poem-item {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  background-color: var(--tertiary);
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 24px;
+  width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+}
