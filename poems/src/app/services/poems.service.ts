@@ -1,15 +1,17 @@
 import {Injectable} from '@angular/core';
-import {mockPoems} from "../../../mock/mock-tasks";
 import IPoem from "../../model/poem";
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PoemsService {
 
-  constructor() { }
+  private apiURL = 'https://poetrydb.org';
+
+  constructor(private http: HttpClient) { }
   getPoems(): Observable<IPoem[]> {
-    return of(mockPoems);
+    return this.http.get<IPoem[]>(this.apiURL + '/lines/' + '?format=json');
   }
 }

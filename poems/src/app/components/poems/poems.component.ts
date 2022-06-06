@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PoemsService} from '../../services/poems.service';
 import IPoem from "../../../model/poem";
 
+
 @Component({
   selector: 'app-poems',
   templateUrl: './poems.component.html',
