@@ -1,5 +1,10 @@
 <div class="poem-item">
-  <h2>{{ poem.title}} <fa-icon [icon]="faTimes"></fa-icon></h2>
+  <h2>{{ poem.title}}
+    <fa-icon
+      [icon]="faTimes"
+      (click)="onDelete(poem)">
+    ></fa-icon>
+  </h2>
   <h3>{{ poem.author}}</h3>
   <div *ngFor="let line of poem.lines">
     <p>{{ line }}</p>

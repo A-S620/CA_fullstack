@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import IPoem from "../../../model/poem";
 import {faTimes} from "@fortawesome/free-solid-svg-icons/faTimes";
 
@@ -10,10 +10,17 @@ import {faTimes} from "@fortawesome/free-solid-svg-icons/faTimes";
 export class PoemComponent implements OnInit {
   @Input() poem!: IPoem;
   faTimes = faTimes;
+  @Output() onDeletePoem = new EventEmitter<IPoem>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  onDelete(poem: IPoem) {
+    this.onDeletePoem.emit(poem);
+  }
 }
+
+
