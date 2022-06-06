@@ -3,7 +3,9 @@
     {
       "author": "Kitkat",
       "title": "Kitkat",
-      "lines": "Kitkat is a good",
+      "lines": [
+        "Kitkat is a good"
+      ],
       "linesCount": 1
     }
   ]

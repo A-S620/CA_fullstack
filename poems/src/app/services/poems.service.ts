@@ -11,19 +11,19 @@ export class PoemsService {
   private poetryDBApi = 'https://poetrydb.org';
   private mockApi = 'http://localhost:3000/poems';
 
-  constructor(private http: HttpClient) { }
-  getPoems(): Observable<IPoem[]> {
-    this.http.get<IPoem[]>(this.poetryDBApi +'/lines/love').pipe(
-      map(poems => poems.map(poem => {
-        console.log(poem);
-        this.http.post(this.mockApi + '/' + poem.title, poem);
-      }))
-    );
-    return this.http.get<IPoem[]>(this.mockApi);
+  constructor(private http: HttpClient) {
   }
 
-  deletePoem(poem: IPoem):Observable<IPoem> {
-    return this.http.delete<IPoem>(this.mockApi + '/' + poem.title);
+  getPoemsFromDB(): Observable<IPoem[]>{
+    return this.http.get<IPoem[]>(this.poetryDBApi + '/lines,poemcount/love;5')
+  }
+  addPoem(poem: IPoem): Observable<IPoem> {
+    return this.http.post<IPoem>(this.mockApi, poem);
+  }
+
+
+  deletePoem(poem: IPoem): Observable<IPoem> {
+    return this.http.delete<IPoem>(this.mockApi + '/' + poem.id);
 
   }
 }

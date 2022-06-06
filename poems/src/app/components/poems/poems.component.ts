@@ -17,11 +17,18 @@ export class PoemsComponent implements OnInit {
 
 
   ngOnInit(): void {
-   this.poemService.getPoems().subscribe((poems) => (this.poems = poems));
+    this.poemService.getPoemsFromDB().subscribe((poems) => {
+      poems.forEach(poem => {
+        poem.id = (poem.title as string).replace(/\s+/g, '');
+        this.poemService.addPoem(poem)
+        this.poems.push(poem);
+      })
+    });
   }
   deletePoem(poem: IPoem) {
+    //TODO: delete poem from mock api
     this.poemService.deletePoem(poem).subscribe(() => {
-      this.poems = this.poems.filter(p => p.title !== poem.title);
+      this.poems = this.poems.filter(p => p.id !== poem.id);
     });
   }
 
