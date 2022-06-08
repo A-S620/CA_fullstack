@@ -6,3 +6,5 @@
 /boss-machine-api/.idea/
 
 .DS_Store
+
+tic-tac-toe/package-lock.json
