@@ -3,3 +3,4 @@
 /.idea/sonarlint/issuestore/
 /boss-machine-api/node_modules/
 /boss-machine-api/package-lock.json
+/boss-machine-api/.idea/
